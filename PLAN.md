@@ -101,6 +101,5 @@ as researched facts.
     such as `sketch.png` or `sketch.jpg`.
 
 ## 10. Sketch
+<img width="1304" height="1600" alt="sketch" src="https://github.com/user-attachments/assets/0b875a9c-8507-436e-b79d-0cc928914b91" />
 
-**Pending:** Add the actual approved sketch file to the repository. Do
-not mark this item complete until the file has been added.
