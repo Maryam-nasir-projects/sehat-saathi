@@ -5,18 +5,21 @@
 :root {
     --brand: #087f70;
     --brand-dark: #06695e;
+
     --bg: #f8faf8;
     --mint: #e8f6f1;
     --white: #ffffff;
+
     --heading: #153a35;
     --text: #30443f;
     --muted: #526760;
     --border: #dce9e3;
+
     --focus: #f0b429;
 
-    --space: 1rem;
-    --radius: 14px;
+    --radius: 18px;
 }
+
 
 /* =====================================
    2. GLOBAL SETTINGS
@@ -54,24 +57,32 @@ a {
     width: 100%;
     max-width: 1440px;
     margin-inline: auto;
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
 }
+
+a:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 4px;
+}
+
 
 /* =====================================
    3. HEADER
 ===================================== */
 
 .site-header {
+    position: relative;
+    z-index: 2;
     background: var(--mint);
     border-bottom: 1px solid var(--border);
 }
 
 .header-inner {
-    position: relative;
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 0.75rem;
+
     min-height: 82px;
     padding-block: 0.75rem;
 }
@@ -87,28 +98,32 @@ a {
 .brand-logo {
     width: 52px;
     height: 52px;
-    object-fit: contain;
     flex-shrink: 0;
+    object-fit: contain;
 }
 
 .site-title {
     position: absolute;
-    top: 50%;
+    top: 1rem;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+
     margin: 0;
     color: var(--heading);
+
     font-size: clamp(1rem, 2.5vw, 1.8rem);
     font-weight: 800;
     line-height: 1.2;
     text-align: center;
     white-space: nowrap;
+
     pointer-events: none;
 }
 
 .brand-accent {
     color: var(--brand);
 }
+
 
 /* =====================================
    4. NAVIGATION
@@ -117,34 +132,33 @@ a {
 .site-header nav {
     display: flex;
     grid-column: 1 / -1;
+
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.75rem 1.25rem;
+    gap: 0.75rem 1.5rem;
 }
 
 .site-header nav a {
     color: var(--text);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 700;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .site-header nav a:hover {
     color: var(--brand);
 }
 
-a:focus-visible {
-    outline: 3px solid var(--focus);
-    outline-offset: 4px;
-}
 
 /* =====================================
    5. HERO SECTION
 ===================================== */
 
 .hero {
-    padding-block: 3rem;
+    padding-block: 3.5rem;
+
     background:
         radial-gradient(
             circle at 90% 10%,
@@ -158,7 +172,7 @@ a:focus-visible {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .hero-content {
@@ -167,33 +181,40 @@ a:focus-visible {
 
 .eyebrow {
     margin: 0 0 0.9rem;
+
     color: var(--brand-dark);
     font-size: 0.85rem;
     font-weight: 800;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.08em;
     line-height: 1.5;
 }
 
 .hero h1 {
     margin: 0;
+
     color: var(--heading);
-    font-size: clamp(2.1rem, 7vw, 3.5rem);
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.04em;
+
     overflow-wrap: break-word;
 }
 
 .hero h1 span {
+    display: block;
     color: var(--brand);
 }
 
 .hero-description {
-    margin: 1.25rem 0 1.6rem;
+    max-width: 38rem;
+    margin: 1.25rem 0 1.75rem;
+
     color: var(--text);
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.9;
 }
+
 
 /* =====================================
    6. PRIMARY BUTTON
@@ -201,31 +222,43 @@ a:focus-visible {
 
 .primary-button {
     display: inline-flex;
+
     max-width: 100%;
     min-height: 3.5rem;
+
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    padding: 0.9rem 1.4rem;
+
+    padding: 0.9rem 1.5rem;
+
     border: 2px solid var(--brand);
-    border-radius: 0.65rem;
+    border-radius: 0.7rem;
+
     background: var(--brand);
     color: var(--white);
+
     font-size: 1rem;
     font-weight: 800;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.2s ease;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .primary-button:hover {
     border-color: var(--brand-dark);
     background: var(--brand-dark);
+    transform: translateY(-2px);
 }
 
 .primary-button span {
     font-size: 1.25rem;
 }
+
 
 /* =====================================
    7. HERO IMAGE
@@ -235,9 +268,12 @@ a:focus-visible {
     width: 100%;
     min-width: 0;
     overflow: hidden;
+
     border: 1px solid var(--border);
     border-radius: 1.25rem;
+
     background: var(--white);
+
     box-shadow: 0 1rem 2.5rem rgba(21, 58, 53, 0.12);
 }
 
@@ -247,12 +283,13 @@ a:focus-visible {
     object-fit: cover;
 }
 
+
 /* =====================================
    8. FEATURES
 ===================================== */
 
 .features {
-    padding-block: 2.75rem;
+    padding-block: 3rem;
     background: var(--white);
 }
 
@@ -264,24 +301,30 @@ a:focus-visible {
 
 .feature {
     min-width: 0;
+    padding: 0.5rem;
     text-align: center;
 }
 
 .feature-icon {
     display: grid;
+
     width: 3.5rem;
     height: 3.5rem;
-    margin: 0 auto 0.75rem;
+
+    margin: 0 auto 1rem;
     place-items: center;
+
     border-radius: 50%;
     background: var(--mint);
     color: var(--brand-dark);
+
     font-size: 1.8rem;
     font-weight: 800;
 }
 
 .feature h2 {
     margin: 0 0 0.5rem;
+
     color: var(--heading);
     font-size: 1.2rem;
     line-height: 1.4;
@@ -293,117 +336,187 @@ a:focus-visible {
     font-size: 1rem;
 }
 
+
 /* =====================================
    9. HOSPITAL DIRECTORY
 ===================================== */
 
 .hospital-section {
-    padding-block: 3.5rem;
+    padding-block: 4rem;
     scroll-margin-top: 1rem;
 }
 
 .section-heading {
-    margin-bottom: 2rem;
+    max-width: 750px;
+    margin-bottom: 2.25rem;
 }
 
 .section-heading h2,
 .about-content h2 {
     margin: 0;
+
     color: var(--heading);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
     font-weight: 800;
     line-height: 1.25;
     letter-spacing: -0.035em;
+
     overflow-wrap: break-word;
 }
 
 .section-heading > p:last-child {
-    margin: 0.9rem 0 0;
+    margin: 1rem 0 0;
     color: var(--muted);
     font-size: 1rem;
+    line-height: 1.8;
 }
 
 .hospital-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 1.1rem;
+    align-items: stretch;
+    gap: 1.5rem;
 }
 
 .hospital-card {
     display: flex;
     min-width: 0;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1.5rem;
+
+    overflow: hidden;
+
     border: 1px solid var(--border);
     border-radius: var(--radius);
+
     background: var(--white);
-    box-shadow: 0 0.3rem 1.1rem rgba(21, 58, 53, 0.04);
-    transition: box-shadow 0.2s ease;
+
+    box-shadow: 0 0.3rem 1.1rem rgba(21, 58, 53, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .hospital-card:hover {
-    box-shadow: 0 0.8rem 1.8rem rgba(21, 58, 53, 0.09);
+    transform: translateY(-4px);
+    box-shadow: 0 0.8rem 1.8rem rgba(21, 58, 53, 0.12);
 }
 
-.hospital-icon {
-    display: grid;
-    width: 3rem;
-    height: 3rem;
-    flex-shrink: 0;
-    place-items: center;
-    border-radius: 0.75rem;
+
+/* Hospital images */
+
+.hospital-photo {
+    display: block;
+
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+    object-position: center;
+
     background: var(--mint);
-    color: var(--brand-dark);
-    font-size: 1rem;
+}
+
+
+/* Hospital card content */
+
+.hospital-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 1.5rem;
+}
+
+.hospital-label {
+    margin: 0 0 0.65rem !important;
+
+    color: var(--brand-dark) !important;
+    font-size: 0.75rem !important;
     font-weight: 800;
+    letter-spacing: 0.07em;
+    line-height: 1.5 !important;
 }
 
 .hospital-card h3 {
-    margin: 1.25rem 0 0.5rem;
+    margin: 0 0 0.75rem;
+
     color: var(--heading);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     line-height: 1.45;
+
     overflow-wrap: break-word;
 }
 
-.hospital-card p {
-    margin: 0 0 1.25rem;
+.hospital-card-content > p:not(.hospital-label) {
+    margin: 0 0 1.5rem;
+
     color: var(--muted);
-    font-size: 1rem;
+    font-size: 0.98rem;
     line-height: 1.8;
 }
 
-.text-link {
-    display: inline-block;
+
+/* Hospital website button */
+
+.hospital-card .text-link {
+    display: inline-flex;
+
     max-width: 100%;
+    min-height: 46px;
+
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
     margin-top: auto;
-    color: var(--brand-dark);
-    font-size: 1rem;
+    padding: 0.7rem 1rem;
+
+    border: 1px solid var(--brand);
+    border-radius: 0.6rem;
+
+    background: var(--brand);
+    color: var(--white);
+
+    font-size: 0.9rem;
     font-weight: 800;
-    line-height: 1.6;
-    text-decoration: underline;
-    text-underline-offset: 0.25rem;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+
     overflow-wrap: anywhere;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
 }
 
-.text-link:hover {
-    color: var(--brand);
+.hospital-card .text-link:hover {
+    border-color: var(--brand-dark);
+    background: var(--brand-dark);
+    color: var(--white);
+}
+
+.hospital-card .text-link span {
+    flex-shrink: 0;
 }
 
 .directory-note {
-    margin: 1.4rem 0 0;
+    margin: 1.5rem 0 0;
+
     color: var(--muted);
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.8;
 }
 
+
 /* =====================================
-   10. ABOUT
+   10. ABOUT SECTION
 ===================================== */
 
 .about-section {
-    padding-block: 3.5rem;
+    padding-block: 4rem;
     background: var(--mint);
 }
 
@@ -411,34 +524,45 @@ a:focus-visible {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     align-items: start;
-    gap: 1.2rem;
+    gap: 1.5rem;
 }
 
 .about-icon {
     display: grid;
-    width: 3.1rem;
-    height: 3.1rem;
+
+    width: 3.5rem;
+    height: 3.5rem;
+
     place-items: center;
-    border-radius: 0.8rem;
+
+    border-radius: 0.9rem;
     background: var(--brand);
     color: var(--white);
+
     font-size: 2rem;
     line-height: 1;
 }
 
-.about-content p:last-child {
-    margin-bottom: 0;
+.about-content h2 {
+    max-width: 800px;
+}
+
+.about-content div > p:last-child {
+    max-width: 850px;
+    margin: 1rem 0 0;
+
     color: var(--text);
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.9;
 }
+
 
 /* =====================================
    11. FOOTER
 ===================================== */
 
 .site-footer {
-    background: var(--border);
+    background: #e4eee9;
     color: var(--heading);
 }
 
@@ -447,13 +571,15 @@ a:focus-visible {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+
     padding-block: 1.5rem;
 }
 
 .footer-brand {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
+
     color: var(--heading);
     font-size: 1.1rem;
     font-weight: 800;
@@ -469,9 +595,9 @@ a:focus-visible {
     color: var(--brand-dark);
 }
 
-.footer-inner p {
+.footer-inner > p {
     margin: 0;
-    color: var(--heading);
+    color: var(--muted);
     font-size: 0.9rem;
     line-height: 1.7;
 }
@@ -488,14 +614,12 @@ a:focus-visible {
     color: var(--brand);
 }
 
+
 /* =====================================
-   12. RESPONSIVE DESIGN
+   12. TABLET LAYOUT
 ===================================== */
 
 @media (min-width: 600px) {
-    .container {
-        padding-inline: 1.5rem;
-    }
 
     .feature-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -514,7 +638,13 @@ a:focus-visible {
     }
 }
 
+
+/* =====================================
+   13. DESKTOP LAYOUT
+===================================== */
+
 @media (min-width: 900px) {
+
     .header-inner {
         grid-template-columns: auto minmax(0, 1fr) auto;
         gap: 1.5rem;
@@ -524,13 +654,14 @@ a:focus-visible {
         position: static;
         transform: none;
         justify-self: center;
+
         font-size: 1.8rem;
     }
 
     .site-header nav {
         grid-column: auto;
         justify-content: flex-end;
-        gap: 1.25rem;
+        gap: 1.5rem;
     }
 
     .hero {
@@ -538,29 +669,43 @@ a:focus-visible {
     }
 
     .hero-grid {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 3rem;
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        gap: 3.5rem;
     }
 
-    .hero-description {
-        max-width: 36rem;
+    .feature-grid {
+        gap: 2.5rem;
     }
 
     .hospital-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.75rem;
+    }
+
+    .hospital-photo {
+        height: 230px;
+    }
+
+    .hospital-card-content {
+        padding: 1.5rem;
     }
 
     .about-content {
         grid-template-columns: auto minmax(0, 1fr);
-        gap: 1.5rem;
+        gap: 1.75rem;
     }
 }
 
+
 /* =====================================
-   13. SMALL SCREEN ADJUSTMENTS
+   14. SMALL SCREEN ADJUSTMENTS
 ===================================== */
 
-@media (max-width: 480px) {
+@media (max-width: 599px) {
+
     .container {
         padding-inline: 1rem;
     }
@@ -576,7 +721,7 @@ a:focus-visible {
     }
 
     .site-title {
-        font-size: clamp(1rem, 5vw, 1.35rem);
+        font-size: clamp(1rem, 4.5vw, 1.35rem);
     }
 
     .site-header nav {
@@ -584,31 +729,63 @@ a:focus-visible {
     }
 
     .site-header nav a {
-        font-size: 0.85rem;
+        font-size: 0.88rem;
     }
 
     .hero {
-        padding-block: 2.5rem;
+        padding-block: 2.75rem;
     }
 
     .hero h1 {
-        font-size: clamp(2rem, 9vw, 2.6rem);
+        font-size: clamp(2rem, 8vw, 2.7rem);
+    }
+
+    .hero-description {
+        font-size: 1rem;
     }
 
     .primary-button {
         width: 100%;
     }
 
-    .hospital-card {
+    .features {
+        padding-block: 2.5rem;
+    }
+
+    .feature-grid {
+        gap: 2rem;
+    }
+
+    .hospital-section,
+    .about-section {
+        padding-block: 3rem;
+    }
+
+    .hospital-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+    }
+
+    .hospital-photo {
+        height: 220px;
+    }
+
+    .hospital-card-content {
         padding: 1.25rem;
+    }
+
+    .footer-inner {
+        gap: 1rem;
     }
 }
 
+
 /* =====================================
-   14. ACCESSIBILITY
+   15. ACCESSIBILITY
 ===================================== */
 
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
@@ -616,129 +793,13 @@ a:focus-visible {
     *,
     *::before,
     *::after {
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-    }
-}
-
-/* HOSPITAL DIRECTORY CARDS */
-
-.hospital-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
-}
-
-.hospital-card {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    align-items: stretch;
-    overflow: hidden;
-    padding: 0;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: var(--white);
-    box-shadow: 0 0.3rem 1.1rem rgba(21, 58, 53, 0.06);
-    transition: box-shadow 0.2s ease;
-}
-
-.hospital-card:hover {
-    box-shadow: 0 0.8rem 1.8rem rgba(21, 58, 53, 0.12);
-}
-
-/* Hospital photo */
-.hospital-photo {
-    display: block;
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center;
-    background: var(--mint);
-}
-
-/* Text content */
-.hospital-card-content {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.5rem;
-}
-
-.hospital-card h3 {
-    margin: 0 0 0.75rem;
-    color: var(--heading);
-    font-size: 1.2rem;
-    line-height: 1.45;
-    overflow-wrap: break-word;
-}
-
-.hospital-card p {
-    margin: 0 0 1.25rem;
-    color: var(--muted);
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-.hospital-card .text-link {
-    margin-top: auto;
-}
-
-@media (min-width: 600px) {
-    .hospital-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (min-width: 900px) {
-    .hospital-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    .hospital-photo {
-        height: 200px;
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
     }
 
-    .hospital-card-content {
-        padding: 1.25rem;
-    }
-}
-
-
-/* MOBILE PHONES */
-@media (max-width: 600px) {
-    .hospital-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .hospital-image {
-        height: 230px;
-    }
-
-    .hospital-card-content {
-        padding: 20px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hospital-card {
-        transition: none;
-    }
-
-    .hospital-card:hover {
+    .hospital-card:hover,
+    .primary-button:hover {
         transform: none;
     }
 }
-
-/* TABLETS */
-@media (max-width: 900px) {
-    .hospital-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
