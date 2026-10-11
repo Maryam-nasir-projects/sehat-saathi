@@ -46,5 +46,7 @@ Hospital services, contact details, schedules, and appointment options may chang
 Sehat Saathi does not provide medical advice or independently confirm appointments. Where online booking is unavailable, visitors should contact the hospital directly.
 
 ## Project Status
+## Project Status
 
+The Sehat Saathi website has been published using GitHub Pages. It provides a responsive hospital directory with links to selected hospitals' official websites. The website is an independent student project built with HTML5 and CSS3. It does not provide online appointment booking or medical advice.
 This project is being developed as part of a web development assignment. Features and information will be added and tested as development progresses.
