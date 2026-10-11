@@ -1,56 +1,69 @@
 # Sehat Saathi — Karachi Hospital Directory
-#Live Site
+
+## Live Site
+
 https://maryam-nasir-projects.github.io/sehat-saathi/
 
 ## About the Project
 
-Sehat Saathi is a student website project designed to help patients and their families find information about hospitals in Karachi. It aims to make hospital information and official appointment options easier to access.
+Sehat Saathi is a student website project designed to help patients and their families explore hospital information in Karachi. It provides links to selected hospitals' official websites so visitors can learn more about their services and facilities.
 
-**Note:** Sehat Saathi is an independent student project. It is not an official hospital website or a medical service.
+**Note:** Sehat Saathi is an independent student project. It is not affiliated with any hospital and does not provide medical services or advice.
 
 ## Project Goals
 
-- Help visitors explore hospital information.
+- Help visitors explore hospital information in Karachi.
 - Provide links to official hospital websites.
-- Share verified online appointment links when available.
-- Make the website simple and accessible on mobile phones and computers.
+- Help visitors find information about hospital services through official sources.
+- Make the website easy to use on mobile phones, tablets, and computers.
 
 ## Technologies Used
 
 - HTML5
 - CSS3
 
-This project follows the course requirement to use HTML and CSS only, without JavaScript or frameworks.
+This project uses HTML and CSS only, without JavaScript or external frameworks, in accordance with the course requirements.
 
 ## How to View the Website
 
-1. Open the project folder in Visual Studio Code.
-2. Open `index.html`.
-3. Open the file in a web browser to view the website.
+### Option 1: View Online
 
+Visit the live website:
+
+https://maryam-nasir-projects.github.io/sehat-saathi/
+
+### Option 2: Run Locally
+
+1. Download or clone this repository.
+2. Open the project folder in Visual Studio Code.
+3. Open `index.html` in a web browser.
 
 ## How I Used AI
 
 I used ChatGPT as a learning assistant while developing my Sehat Saathi website. It helped me plan the project, understand HTML and CSS, organize website sections, and improve the layout and responsiveness.
+
 When I found parts of the code difficult to understand or encountered problems, I used AI to explain the code and suggest possible fixes. I reviewed the suggestions, made changes when needed, and tested the website to check whether everything worked correctly.
+
 AI helped me learn and solve problems, but I am responsible for my project. I make an effort to understand the code I use so that I can explain how my website works.
 
 ## Information Sources
 
-Hospital information should be checked against official sources before publication.
+The following official hospital websites are linked from the directory:
 
-- Jinnah Postgraduate Medical Centre: https://www.jpmc.edu.pk/
-- Dr. Ruth K. M. Pfau Civil Hospital Karachi: https://chk.gov.pk/
-- Aga Khan University Hospital: https://hospitals.aku.edu/pakistan/karachi/pages/default.aspx
-- Indus Hospital & Health Network: https://indushospital.org.pk/
+- **Aga Khan University Hospital:** https://hospitals.aku.edu/pakistan/facility/akuh-main-campus
+- **Indus Hospital & Health Network:** https://indushospital.org.pk/
+- **Jinnah Postgraduate Medical Centre (JPMC):** https://www.jpmc.edu.pk/
 
 ## Important Information
 
-Hospital services, contact details, schedules, and appointment options may change. Visitors should confirm current information through the relevant hospital's official website.
+Hospital services, contact details, schedules, and appointment options may change. Visitors should confirm current information directly through the relevant hospital's official website.
 
-Sehat Saathi does not provide medical advice or independently confirm appointments. Where online booking is unavailable, visitors should contact the hospital directly.
+Sehat Saathi does not provide medical advice, independently verify all hospital information, or confirm appointments. Visitors should contact the hospital directly for current details and appointment arrangements.
 
 ## Project Status
 
-The Sehat Saathi website has been published using GitHub Pages. It provides a responsive hospital directory with links to selected hospitals' official websites. The website is an independent student project built with HTML5 and CSS3. It does not provide online appointment booking or medical advice.
-This project is being developed as part of a web development assignment. Features and information will be added and tested as development progresses.
+The Sehat Saathi website is published using GitHub Pages. It includes a directory of three selected hospitals in Karachi, with links to their official websites.
+
+The project is built with HTML5 and CSS3 and is designed for use on mobile phones and computers. It does not provide online appointment booking, emergency services, or medical advice.
+
+This website was developed as part of a web development assignment. Its content, layout, and responsiveness are reviewed and improved as needed.
