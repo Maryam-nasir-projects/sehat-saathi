@@ -31,10 +31,9 @@ This project follows the course requirement to use HTML and CSS only, without Ja
 
 ## How I Used AI
 
-I used AI as a learning assistant while developing my Sehat Saathi website. It helped me understand HTML and CSS code, explain how different parts of the website work, and identify and fix problems when I found something difficult.
-I also used AI to improve the website's layout, responsiveness, and code structure. I reviewed the suggestions, made changes to the code, and tested the website to check whether everything worked correctly.
-AI helped me learn and solve problems, but I understand that I am responsible for my project and should be able to explain the code I used.
-I used ChatGPT to help plan the project, understand HTML and CSS, organize website sections, and troubleshoot code. I review the code and make sure I understand it before using it in my project. I also test the website and make changes when needed.
+I used ChatGPT as a learning assistant while developing my Sehat Saathi website. It helped me plan the project, understand HTML and CSS, organize website sections, and improve the layout and responsiveness.
+When I found parts of the code difficult to understand or encountered problems, I used AI to explain the code and suggest possible fixes. I reviewed the suggestions, made changes when needed, and tested the website to check whether everything worked correctly.
+AI helped me learn and solve problems, but I am responsible for my project. I make an effort to understand the code I use so that I can explain how my website works.
 
 ## Information Sources
 
