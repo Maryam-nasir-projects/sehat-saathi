@@ -15,7 +15,7 @@ Sehat Saathi is a student website project designed to help patients and their fa
 - Help visitors explore hospital information in Karachi.
 - Provide links to official hospital websites.
 - Help visitors find information about hospital services through official sources.
-- Make the website easy to use on mobile phones, tablets, and computers.
+- Make the website simple and accessible on mobile phones and computers.
 
 ## Technologies Used
 
