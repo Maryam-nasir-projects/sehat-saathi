@@ -1,106 +1,76 @@
-# Sehat Saathi --- Project Plan
+# Sehat Saathi — Project Plan
 
-## 1. Project overview
+## 1. Project Overview
 
-**Project name:** Sehat Saathi\
-**Project type:** Independent student hospital directory\
-**Location focus:** Karachi, Pakistan\
-**Purpose:** Help visitors find official online information about
-selected hospitals in Karachi.
+**Project name:** Sehat Saathi  
+**Project type:** Independent student hospital directory  
+**Location focus:** Karachi, Pakistan  
+**Purpose:** Help visitors find official online information about selected hospitals in Karachi.
 
-Sehat Saathi is an independent student project. It is not a hospital,
-emergency service, or official partner of any listed hospital.
+Sehat Saathi is an independent student project. It is not a hospital, emergency service, or official partner of any listed hospital.
 
-## 2. Intended audience
+## 2. Intended Audience
 
-People in Karachi who want a simple starting point for exploring
-hospital information online, including students, residents, and family
-members helping someone find a hospital.
+People in Karachi who want a simple starting point for exploring hospital information online, including students, residents, and family members helping someone find a hospital.
 
-## 3. Visitor goal
+## 3. Visitor Goal
 
-The main visitor goal is to browse the listed hospitals and follow their
-official websites to confirm services and other current details. The
-main action is **"Find a Hospital"**, which takes visitors to the
-hospital directory section.
+The main visitor goal is to browse the listed hospitals and follow their official websites to confirm services and other current details. The main action is **"Find a Hospital,"** which takes visitors to the hospital directory section.
 
-## 4. Research and sources
+## 4. Research and Sources
 
-Use official hospital websites as primary sources: - **Aga Khan
-University Hospital:** https://hospitals.aku.edu/karachi/ - **Indus
-Hospital:** https://indushospital.org.pk/ - **Jinnah Postgraduate
-Medical Centre (JPMC):** https://jpmc.edu.pk/
+The project uses official hospital websites as primary sources:
 
-Before publishing, open each link and confirm it works and points to the
-intended official website.
+- **Aga Khan University Hospital:** https://hospitals.aku.edu/pakistan/facility/akuh-main-campus
+- **Indus Hospital & Health Network:** https://indushospital.org.pk/
+- **Jinnah Postgraduate Medical Centre (JPMC):** https://www.jpmc.edu.pk/
 
-### Research notes
+Before publishing or updating the website, check that each link works and leads to the intended official website.
 
--   Use official sources for hospital names and links.
--   Do not invent addresses, telephone numbers, fees, opening hours,
-    services, reviews, or availability.
--   If a detail cannot be verified, omit it or write **"Contact the
-    hospital for details."**
--   Current services and other details should be confirmed directly with
-    each hospital.
+### Research Notes
 
-## 5. Planned page sections
+- Use official sources for hospital names and links.
+- Do not invent addresses, telephone numbers, fees, opening hours, services, reviews, or availability.
+- If a detail cannot be verified, omit it or advise visitors to contact the hospital.
+- Visitors should confirm current services and other details directly with each hospital.
 
-1.  **Header and navigation** --- Sehat Saathi branding and links to
-    Home, Hospitals, and About.
-2.  **Hero section** --- Short explanation and the main "Find a
-    Hospital" action.
-3.  **Website benefits** --- Brief explanation of how the directory
-    helps visitors explore information.
-4.  **Hospital directory** --- Cards with links to official hospital
-    websites.
-5.  **About section** --- Explain that this is an independent student
-    project.
-6.  **Footer** --- Project note and a link back to the top.
+## 5. Planned Page Sections
 
-## 6. Design and accessibility
+1. **Header and Navigation:** Sehat Saathi branding and links to Home, Hospitals, and About.
+2. **Hero Section:** A short introduction and the main "Find a Hospital" action.
+3. **Website Benefits:** A brief explanation of how the directory helps visitors explore information.
+4. **Hospital Directory:** Cards with links to the official websites of the three selected hospitals.
+5. **About Section:** An explanation that this is an independent student project.
+6. **Footer:** A short project message and a link back to the top.
 
--   Clean, professional healthcare style with teal/green accents, dark
-    readable text, and a light background.
--   Mobile-first layout from 320px to 1440px with no horizontal
-    scrolling.
--   Semantic HTML, one main `h1`, viewport meta tag, and correct
-    document language.
--   CSS variables for colors and spacing.
--   Meaningful alternative text for informative images; empty alt text
-    for purely decorative images.
--   Readable links, visible keyboard focus, and reduced-motion support.
+## 6. Design and Accessibility
 
-## 7. Technical scope
+- Use a clean, professional healthcare style with teal and green accents, readable dark text, and a light background.
+- Design for screen widths from 320px to 1440px, aiming to prevent horizontal scrolling.
+- Use semantic HTML, one main `h1`, a viewport meta tag, and the correct document language.
+- Use CSS variables for colours and other reusable styles.
+- Provide meaningful alternative text for informative images and empty alt text for decorative images.
+- Use readable links, visible keyboard focus, and reduced-motion support.
 
--   Build with **HTML and CSS only**; no JavaScript, frameworks, or
-    website builders.
--   Use `index.html` and `style.css`.
--   Publish using GitHub Pages.
--   Test at 320px, 375px, 768px, 1024px, and 1440px widths.
+## 7. Technical Scope
 
-## 8. How I will use AI
+- Build with **HTML and CSS only**, without JavaScript, frameworks, or website builders.
+- Use `index.html` and `style.css`.
+- Publish the website using GitHub Pages.
+- Check the layout at 320px, 375px, 768px, 1024px, and 1440px screen widths.
 
-I may use AI to explain HTML and CSS, suggest accessible responsive
-layouts, identify mistakes, and review code changes. I will read and
-test the code, make final decisions, verify hospital links and claims,
-and ensure I can explain the code. I will not present unverified claims
-as researched facts.
+## 8. How I Used AI
 
-## 9. Unknowns and risks
+I used ChatGPT as a learning assistant to understand HTML and CSS, organize website sections, improve the layout, and troubleshoot code when I encountered difficulties. I reviewed AI suggestions, made changes when needed, and tested the website. I am responsible for the final code and make an effort to understand it so I can explain how the website works.
 
--   Hospital services, opening hours, contact details, and availability
-    can change; visitors should verify them through official sources.
--   External images may fail to load or have usage restrictions. Check
-    live image loading and use images only when permitted.
--   The site does not book appointments, check queues, provide medical
-    advice, or offer emergency assistance.
--   The project is independent and must not imply endorsement by any
-    hospital.
--   Add the teacher-approved sketch to the repository as a separate file
-    such as `sketch.png` or `sketch.jpg`.
+## 9. Unknowns and Risks
+
+- Hospital services, opening hours, contact details, and availability can change. Visitors should verify current information through official sources.
+- External images may fail to load or have usage restrictions. Check image loading and use images only when permitted.
+- The website does not book appointments, check queues, provide medical advice, or offer emergency assistance.
+- The project is independent and must not imply endorsement by any hospital.
+- Keep the project sketch as a separate image file in the repository if required by the assignment.
 
 ## 10. Sketch
-<img width="1343" height="1600" alt="sketch" src="https://github.com/user-attachments/assets/fec4e703-cafc-4b9a-843e-9c0c4091f218" />
 
-
+The project sketch is included as a design reference. If the instructor has approved it, retain that approval evidence according to the assignment requirements.
