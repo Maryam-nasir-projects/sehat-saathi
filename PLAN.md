@@ -101,5 +101,6 @@ as researched facts.
     such as `sketch.png` or `sketch.jpg`.
 
 ## 10. Sketch
-<img width="1304" height="1600" alt="sketch" src="https://github.com/user-attachments/assets/0b875a9c-8507-436e-b79d-0cc928914b91" />
+<img width="1343" height="1600" alt="sketch" src="https://github.com/user-attachments/assets/fec4e703-cafc-4b9a-843e-9c0c4091f218" />
+
 
