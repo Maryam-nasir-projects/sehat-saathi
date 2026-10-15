@@ -1,331 +1,937 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#087f70" />
     <meta
-        name="description"
-        content="Sehat Saathi helps people explore hospital information in Karachi."
-    >
-
-    <meta name="theme-color" content="#e8f6f1">
-
-    <title>Sehat Saathi | Find a Hospital</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-</head>
-
-<body>
-
-    <!-- HEADER -->
+      name="description"
+      content="Sehat Saathi helps you explore hospitals in Karachi and submit appointment requests."
+    />
+    <title>Sehat Saathi | Find Care in Karachi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-        <div class="container header-inner">
-
-            <a class="brand" href="#home" aria-label="Sehat Saathi home">
-                <img
-                    src="images/logo.png"
-                    alt="Sehat Saathi logo"
-                    class="brand-logo"
-                    width="65"
-                    height="65"
-                >
-            </a>
-
-            <h2 class="site-title">
-                Sehat <span class="brand-accent">Saathi</span>
-            </h2>
-
-            <nav aria-label="Main navigation">
-                <a href="#home">Home</a>
-                <a href="#hospitals">Hospitals</a>
-                <a href="#about">About</a>
-            </nav>
-
-        </div>
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Sehat Saathi home">
+          <span class="brand-mark" aria-hidden="true">✚</span>
+          <span
+            ><strong>Sehat Saathi</strong><small>Care, made easier</small></span
+          >
+        </a>
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+          aria-label="Open navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+          <a href="#hospitals">Hospitals</a>
+          <a href="#services">Services</a>
+          <a href="#appointment">Appointments</a>
+          <a href="#about">About</a>
+          <a class="nav-cta" href="#appointment"
+            >Book a visit <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
     </header>
 
-
-    <main>
-
-        <!-- HERO SECTION -->
-        <section
-            class="hero"
-            id="home"
-            aria-labelledby="hero-title"
-        >
-            <div class="container hero-grid">
-
-                <div class="hero-content">
-                    <p class="eyebrow">YOUR HEALTH, YOUR GUIDE</p>
-
-                    <h1 id="hero-title">
-                        Find the Right Hospital with
-                        <span>Sehat Saathi</span>
-                    </h1>
-
-                    <p class="hero-description">
-                        Explore hospital information in Karachi and visit
-                        official websites to learn about available services.
-                    </p>
-
-                    <a class="primary-button" href="#hospitals">
-                        Find a Hospital
-                        <span aria-hidden="true">→</span>
-                    </a>
-                </div>
-
-                <div class="hero-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1000&q=85"
-                        alt="Modern hospital building"
-                        width="1000"
-                        height="700"
-                        fetchpriority="high"
-                    >
-                </div>
-
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow"
+              ><span class="eyebrow-dot"></span> YOUR HEALTH, ONE STEP
+              CLOSER</span
+            >
+            <h1>
+              Find the right care.<br /><span>Feel more in control.</span>
+            </h1>
+            <p class="hero-text">
+              Explore trusted hospitals across Karachi, compare your options,
+              and send an appointment request in a few simple steps.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#hospitals"
+                >Explore hospitals <span aria-hidden="true">→</span></a
+              >
+              <a class="btn btn-secondary" href="#appointment"
+                ><span class="play-icon" aria-hidden="true">＋</span> Request an
+                appointment</a
+              >
             </div>
-        </section>
-
-
-        <!-- FEATURES -->
-        <section class="features" aria-label="Website benefits">
-            <div class="container feature-grid">
-
-                <article class="feature">
-                    <span class="feature-icon" aria-hidden="true">⌕</span>
-                    <h2>Find Hospitals</h2>
-                    <p>Explore hospital websites and information.</p>
-                </article>
-
-                <article class="feature">
-                    <span class="feature-icon" aria-hidden="true">+</span>
-                    <h2>Explore Services</h2>
-                    <p>Check details from official sources.</p>
-                </article>
-
-                <article class="feature">
-                    <span class="feature-icon" aria-hidden="true">✓</span>
-                    <h2>Make Informed Choices</h2>
-                    <p>Confirm details directly with each hospital.</p>
-                </article>
-
+            <div class="hero-trust">
+              <div class="trust-icon" aria-hidden="true">♡</div>
+              <p>
+                <strong>Clear information. Simpler next steps.</strong
+                ><span>An independent student directory for Karachi.</span>
+              </p>
             </div>
-        </section>
+          </div>
+          <div
+            class="hero-visual"
+            aria-label="Healthcare professional in a clinical setting"
+          >
+            <div class="hero-image"></div>
+            <div class="floating-card floating-card-top">
+              <span class="floating-icon">✦</span
+              ><span
+                ><strong>Care options</strong
+                ><small>Hospitals across Karachi</small></span
+              >
+            </div>
+            <div class="floating-card floating-card-bottom">
+              <span class="status-check">✓</span
+              ><span
+                ><strong>Simple booking request</strong
+                ><small>Submit details in minutes</small></span
+              >
+            </div>
+            <div class="hero-image-caption">
+              <span class="caption-pulse"></span> Your health journey starts
+              here
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="quick-stats" aria-label="Directory highlights">
+        <div class="container stats-grid">
+          <div class="stat">
+            <span class="stat-icon">⌕</span>
+            <div>
+              <strong>Explore hospitals</strong
+              ><small>Public and private options</small>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">▦</span>
+            <div>
+              <strong>Appointment requests</strong
+              ><small>Organize your next step</small>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">♡</span>
+            <div>
+              <strong>Patient-first design</strong
+              ><small>Simple on every screen</small>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- HOSPITAL DIRECTORY -->
-        <section
-            class="hospital-section"
-            id="hospitals"
-            aria-labelledby="hospital-title"
-        >
-            <div class="container">
+      <section class="section hospitals-section" id="hospitals">
+        <div class="container">
+          <div class="section-heading heading-row">
+            <div>
+              <span class="eyebrow">HOSPITAL DIRECTORY</span>
+              <h2>Care options around <span>Karachi</span></h2>
+              <p>
+                Browse hospitals and open their official websites to confirm
+                services, timings, and appointment procedures.
+              </p>
+            </div>
+            <span class="directory-count"
+              ><strong id="hospitalCount">12</strong> listed hospitals</span
+            >
+          </div>
+          <div class="hospital-tools">
+            <label class="search-box"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                type="search"
+                id="hospitalSearch"
+                placeholder="Search hospital or area…"
+                aria-label="Search hospitals"
+            /></label>
+            <label class="filter-select"
+              ><span class="sr-only">Filter hospitals</span
+              ><select id="hospitalFilter">
+                <option value="all">All hospitals</option>
+                <option value="public">Public / welfare</option>
+                <option value="private">Private</option>
+              </select></label
+            >
+          </div>
+          <div class="hospital-grid" id="hospitalGrid">
+            <article
+              class="hospital-card"
+              data-type="private"
+              data-search="aga khan university hospital stadium road private"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-mint">✚</span
+                ><span class="type-tag private-tag"
+                  >Private / not-for-profit</span
+                >
+              </div>
+              <h3>Aga Khan University Hospital</h3>
+              <p class="hospital-area">Stadium Road</p>
+              <p class="hospital-description">
+                A major teaching hospital with a broad range of specialist
+                services.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://hospitals.aku.edu/pakistan/karachi/pages/default.aspx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Aga Khan University Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="public"
+              data-search="indus hospital health network korangi welfare"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-blue">✚</span
+                ><span class="type-tag public-tag">Welfare / non-profit</span>
+              </div>
+              <h3>Indus Hospital &amp; Health Network</h3>
+              <p class="hospital-area">Korangi Crossing</p>
+              <p class="hospital-description">
+                A non-profit health network; confirm registration and service
+                availability directly.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://indushospital.org.pk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Indus Hospital & Health Network"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="public"
+              data-search="jinnah postgraduate medical centre jpmc rafiqui shaheed road public"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-peach">✚</span
+                ><span class="type-tag public-tag">Public</span>
+              </div>
+              <h3>Jinnah Postgraduate Medical Centre</h3>
+              <p class="hospital-area">Rafiqui Shaheed Road</p>
+              <p class="hospital-description">
+                A large public-sector teaching and referral hospital.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.jpmc.edu.pk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Jinnah Postgraduate Medical Centre"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="private"
+              data-search="liaquat national hospital stadium road private"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-lilac">✚</span
+                ><span class="type-tag private-tag"
+                  >Private / not-for-profit</span
+                >
+              </div>
+              <h3>Liaquat National Hospital</h3>
+              <p class="hospital-area">Stadium Road</p>
+              <p class="hospital-description">
+                A multi-specialty teaching hospital with outpatient and
+                inpatient services.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.lnh.edu.pk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Liaquat National Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="private"
+              data-search="ziauddin hospital clifton north nazimabad"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-blue">✚</span
+                ><span class="type-tag private-tag">Private</span>
+              </div>
+              <h3>Dr. Ziauddin Hospital</h3>
+              <p class="hospital-area">Multiple campuses</p>
+              <p class="hospital-description">
+                Hospital group with campuses and a range of specialist
+                departments.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.ziauddinhospital.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Dr. Ziauddin Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="private"
+              data-search="south city hospital clifton private"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-mint">✚</span
+                ><span class="type-tag private-tag">Private</span>
+              </div>
+              <h3>South City Hospital</h3>
+              <p class="hospital-area">Clifton</p>
+              <p class="hospital-description">
+                Private hospital offering specialist consultations and hospital
+                services.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://southcityhospital.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="South City Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="public"
+              data-search="civil hospital karachi ruth pfau mission road public"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-peach">✚</span
+                ><span class="type-tag public-tag">Public</span>
+              </div>
+              <h3>Dr. Ruth K. M. Pfau Civil Hospital</h3>
+              <p class="hospital-area">Mission Road</p>
+              <p class="hospital-description">
+                A public tertiary-care hospital with emergency and outpatient
+                departments.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.chk.gov.pk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Dr. Ruth K. M. Pfau Civil Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="public"
+              data-search="national institute cardiovascular diseases nicvd rafiqui shaheed road heart"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-lilac">♡</span
+                ><span class="type-tag public-tag">Public / specialist</span>
+              </div>
+              <h3>National Institute of Cardiovascular Diseases</h3>
+              <p class="hospital-area">Rafiqui Shaheed Road</p>
+              <p class="hospital-description">
+                A specialist institute focused on cardiovascular care.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://nicvd.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="National Institute of Cardiovascular Diseases"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="public"
+              data-search="national institute of child health nich children jpmc"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-blue">♡</span
+                ><span class="type-tag public-tag">Public / specialist</span>
+              </div>
+              <h3>National Institute of Child Health</h3>
+              <p class="hospital-area">Near JPMC, Rafiqui Shaheed Road</p>
+              <p class="hospital-description">
+                A specialist public institute focused on children’s healthcare.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.nich.edu.pk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="National Institute of Child Health"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="public"
+              data-search="sindh institute urology transplantation siut public"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-mint">✚</span
+                ><span class="type-tag public-tag">Public / welfare</span>
+              </div>
+              <h3>Sindh Institute of Urology &amp; Transplantation</h3>
+              <p class="hospital-area">Saddar / Civil Hospital area</p>
+              <p class="hospital-description">
+                Specialist care with a focus on urology, kidney disease, and
+                transplantation.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://siut.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Sindh Institute of Urology & Transplantation"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="private"
+              data-search="patel hospital gulshan e iqbal private nonprofit"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-peach">✚</span
+                ><span class="type-tag private-tag"
+                  >Private / not-for-profit</span
+                >
+              </div>
+              <h3>Patel Hospital</h3>
+              <p class="hospital-area">Gulshan-e-Iqbal</p>
+              <p class="hospital-description">
+                A not-for-profit tertiary-care hospital with multiple medical
+                services.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.patel-hospital.org.pk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Patel Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="private"
+              data-search="omi hospital saddar depot lines private"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-lilac">✚</span
+                ><span class="type-tag private-tag">Private</span>
+              </div>
+              <h3>OMI Hospital</h3>
+              <p class="hospital-area">Depot Lines, Saddar</p>
+              <p class="hospital-description">
+                A private multi-specialty hospital in central Karachi.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.omihospital.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="OMI Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="private"
+              data-search="darul sehat hospital gulshan e iqbal"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-blue">✚</span
+                ><span class="type-tag private-tag">Private</span>
+              </div>
+              <h3>Darul Sehat Hospital</h3>
+              <p class="hospital-area">Gulshan-e-Iqbal</p>
+              <p class="hospital-description">
+                A general hospital serving patients in eastern Karachi.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.dsh.com.pk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Darul Sehat Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="private"
+              data-search="medicare cardiac general hospital shaheed e millat"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-mint">♡</span
+                ><span class="type-tag private-tag">Private</span>
+              </div>
+              <h3>Medicare Cardiac &amp; General Hospital</h3>
+              <p class="hospital-area">Shaheed-e-Millat Road</p>
+              <p class="hospital-description">
+                A multi-specialty hospital with cardiac and general care
+                services.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.medicarehospital.com.pk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Medicare Cardiac & General Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+            <article
+              class="hospital-card"
+              data-type="private"
+              data-search="usman memorial hospital federal b area hussainabad"
+            >
+              <div class="hospital-card-top">
+                <span class="hospital-symbol symbol-peach">✚</span
+                ><span class="type-tag private-tag">Private / welfare</span>
+              </div>
+              <h3>Usman Memorial Hospital</h3>
+              <p class="hospital-area">Federal B Area</p>
+              <p class="hospital-description">
+                A community-focused hospital with inpatient, outpatient, and
+                diagnostic services.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://www.umh.com.pk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Official website <span>↗</span></a
+                ><button
+                  class="text-button book-hospital"
+                  data-hospital="Usman Memorial Hospital"
+                >
+                  Request appointment →
+                </button>
+              </div>
+            </article>
+          </div>
+          <p class="empty-state" id="emptyState" hidden>
+            No hospitals match your search. Try a different name or filter.
+          </p>
+          <p class="directory-note">
+            Directory details may change. Please confirm availability,
+            eligibility, timings, and booking arrangements with the hospital
+            directly.
+          </p>
+        </div>
+      </section>
 
-                <div class="section-heading">
-                    <p class="eyebrow">EXPLORE YOUR OPTIONS</p>
+      <section class="section services-section" id="services">
+        <div class="container">
+          <div class="section-heading centered-heading">
+            <span class="eyebrow">HOW WE HELP</span>
+            <h2>A simpler path to <span>healthcare</span></h2>
+            <p>
+              Useful tools to help you organize your next step, without the
+              clutter.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-icon icon-green">▦</div>
+              <h3>Appointment requests</h3>
+              <p>
+                Choose a hospital, preferred date, and time. Your request is
+                saved on this device for this demo.
+              </p>
+              <a href="#appointment">Start a request <span>→</span></a>
+            </article>
+            <article class="service-card">
+              <div class="service-icon icon-blue">⌕</div>
+              <h3>Find a hospital</h3>
+              <p>
+                Search the directory and filter public, welfare, and private
+                hospital options.
+              </p>
+              <a href="#hospitals">Browse directory <span>→</span></a>
+            </article>
+            <article class="service-card">
+              <div class="service-icon icon-peach">♡</div>
+              <h3>Consultation enquiry</h3>
+              <p>
+                Send a demo enquiry about online consultation and get clear
+                next-step guidance.
+              </p>
+              <a href="#consultation">Ask about consultation <span>→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
 
-                    <h2 id="hospital-title">Hospitals in Karachi</h2>
-
-                    <p>
-                        Explore the hospitals below and visit their official
-                        websites for more information.
-                    </p>
-                </div>
-
-
-                <div class="hospital-grid">
-
-                    <!-- AGA KHAN UNIVERSITY HOSPITAL -->
-                    <article class="hospital-card">
-
-                        <img
-                            class="hospital-photo"
-                            src="images/aga-khan.jpg"
-                            alt="Aga Khan University Hospital, Karachi"
-                            width="600"
-                            height="350"
-                            loading="lazy"
-                        >
-
-                        <div class="hospital-card-content">
-
-                            <p class="hospital-label">PRIVATE HOSPITAL</p>
-
-                            <h3>Aga Khan University Hospital</h3>
-
-                            <p>
-                                Explore hospital information, medical services
-                                and patient resources through the official
-                                hospital website.
-                            </p>
-
-                            <a
-                                class="text-link"
-                                href="https://hospitals.aku.edu/pakistan/facility/akuh-main-campus"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Visit Aga Khan University Hospital official website"
-                            >
-                                Visit Official Website
-                                <span aria-hidden="true">↗</span>
-                            </a>
-
-                        </div>
-                    </article>
-
-
-                    <!-- INDUS HOSPITAL -->
-                    <article class="hospital-card">
-
-                        <img
-                            class="hospital-photo"
-                            src="images/indus-hospital.jpg"
-                            alt="Indus Hospital, Karachi"
-                            width="600"
-                            height="350"
-                            loading="lazy"
-                        >
-
-                        <div class="hospital-card-content">
-
-                            <p class="hospital-label">HEALTHCARE SERVICES</p>
-
-                            <h3>Indus Hospital</h3>
-
-                            <p>
-                                Learn about hospital facilities, healthcare
-                                services and other information through the
-                                official website.
-                            </p>
-
-                            <a
-                                class="text-link"
-                                href="https://indushospital.org.pk/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Visit Indus Hospital official website"
-                            >
-                                Visit Official Website
-                                <span aria-hidden="true">↗</span>
-                            </a>
-
-                        </div>
-                    </article>
-
-
-                    <!-- JINNAH POSTGRADUATE MEDICAL CENTRE -->
-                    <article class="hospital-card">
-
-                        <img
-                            class="hospital-photo"
-                            src="images/jpmc.jpg"
-                            alt="Jinnah Postgraduate Medical Centre, Karachi"
-                            width="600"
-                            height="350"
-                            loading="lazy"
-                        >
-
-                        <div class="hospital-card-content">
-
-                            <p class="hospital-label">MEDICAL CENTRE</p>
-
-                            <h3>Jinnah Postgraduate Medical Centre</h3>
-
-                            <p>
-                                Visit the medical centre's website to explore
-                                available hospital information and resources.
-                            </p>
-
-                            <a
-                                class="text-link"
-                                href="https://www.jpmc.edu.pk/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Visit Jinnah Postgraduate Medical Centre official website"
-                            >
-                                Visit Official Website
-                                <span aria-hidden="true">↗</span>
-                            </a>
-
-                        </div>
-                    </article>
-
-                </div>
-
-
-                <p class="directory-note">
-                    Please confirm current services and other details
-                    directly with each hospital.
+      <section class="section booking-section" id="appointment">
+        <div class="container booking-layout">
+          <div class="booking-intro">
+            <span class="eyebrow">PLAN YOUR VISIT</span>
+            <h2>Request an <span>appointment</span></h2>
+            <p>
+              Fill in the details and we’ll record a request on this device.
+              This student project is not connected to hospital booking systems,
+              so it cannot confirm a real hospital appointment.
+            </p>
+            <div class="booking-points">
+              <div>
+                <span>01</span>
+                <p>
+                  <strong>Choose your hospital</strong
+                  ><small>Select from the Karachi directory.</small>
                 </p>
-
+              </div>
+              <div>
+                <span>02</span>
+                <p>
+                  <strong>Pick a preferred time</strong
+                  ><small>Choose a date and preferred time window.</small>
+                </p>
+              </div>
+              <div>
+                <span>03</span>
+                <p>
+                  <strong>Confirm directly</strong
+                  ><small
+                    >Use the hospital’s official contact details to verify
+                    availability.</small
+                  >
+                </p>
+              </div>
             </div>
-        </section>
-
-
-        <!-- ABOUT -->
-        <section
-            class="about-section"
-            id="about"
-            aria-labelledby="about-title"
-        >
-            <div class="container about-content">
-
-                <span class="about-icon" aria-hidden="true">+</span>
-
-                <div>
-                    <p class="eyebrow">ABOUT SEHAT SAATHI</p>
-
-                    <h2 id="about-title">
-                        Health information, made easier to explore.
-                    </h2>
-
-                    <p>
-                        Sehat Saathi is an independent student project
-                        designed to help people explore hospital information
-                        through official online sources. It is not an
-                        emergency service or a medical advice platform.
-                    </p>
+            <div class="important-note">
+              <span>ⓘ</span>
+              <p>
+                <strong>Need urgent medical help?</strong><br />Do not wait for
+                an online request. Contact local emergency services or go to the
+                nearest emergency department.
+              </p>
+            </div>
+          </div>
+          <div class="form-panel">
+            <div class="form-panel-heading">
+              <div>
+                <span class="form-kicker">APPOINTMENT REQUEST</span>
+                <h3>Tell us what you need</h3>
+              </div>
+              <span class="form-step">01 / 01</span>
+            </div>
+            <form id="appointmentForm">
+              <div class="form-grid">
+                <div class="field full-field">
+                  <label for="patientName">Full name <span>*</span></label
+                  ><input
+                    id="patientName"
+                    name="patientName"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Enter your full name"
+                    required
+                    minlength="2"
+                    maxlength="80"
+                  />
                 </div>
+                <div class="field">
+                  <label for="patientPhone">Phone number <span>*</span></label
+                  ><input
+                    id="patientPhone"
+                    name="patientPhone"
+                    type="tel"
+                    autocomplete="tel"
+                    placeholder="03XX XXXXXXX"
+                    required
+                    pattern="[+0-9() -]{8,20}"
+                  />
+                </div>
+                <div class="field">
+                  <label for="patientEmail">Email (optional)</label
+                  ><input
+                    id="patientEmail"
+                    name="patientEmail"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                <div class="field full-field">
+                  <label for="appointmentHospital"
+                    >Hospital <span>*</span></label
+                  ><select id="appointmentHospital" name="hospital" required>
+                    <option value="">Choose a hospital</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="department"
+                    >Department / specialty <span>*</span></label
+                  ><select id="department" name="department" required>
+                    <option value="">Choose a specialty</option>
+                    <option>General Medicine</option>
+                    <option>Cardiology</option>
+                    <option>Dermatology</option>
+                    <option>Paediatrics</option>
+                    <option>Gynaecology</option>
+                    <option>Orthopaedics</option>
+                    <option>Eye Care</option>
+                    <option>Dental Care</option>
+                    <option>Neurology</option>
+                    <option>Urology</option>
+                    <option>Other / not sure</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="appointmentDate"
+                    >Preferred date <span>*</span></label
+                  ><input
+                    id="appointmentDate"
+                    name="date"
+                    type="date"
+                    required
+                  />
+                </div>
+                <div class="field full-field">
+                  <label for="appointmentTime"
+                    >Preferred time <span>*</span></label
+                  ><select id="appointmentTime" name="time" required>
+                    <option value="">Choose a time window</option>
+                    <option>Morning (9 AM – 12 PM)</option>
+                    <option>Afternoon (12 PM – 4 PM)</option>
+                    <option>Evening (4 PM – 8 PM)</option>
+                  </select>
+                </div>
+                <div class="field full-field">
+                  <label for="appointmentNotes">Notes (optional)</label
+                  ><textarea
+                    id="appointmentNotes"
+                    name="notes"
+                    rows="3"
+                    maxlength="500"
+                    placeholder="Briefly share what kind of visit you need. Avoid sensitive medical details."
+                  ></textarea>
+                </div>
+              </div>
+              <label class="consent-row"
+                ><input type="checkbox" id="appointmentConsent" required /><span
+                  >I understand this is a demo request and is not a confirmed
+                  hospital booking. <span>*</span></span
+                ></label
+              >
+              <button class="btn btn-primary submit-btn" type="submit">
+                Save appointment request <span aria-hidden="true">→</span>
+              </button>
+              <p
+                class="form-message"
+                id="appointmentMessage"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </section>
 
+      <section class="section consultation-section" id="consultation">
+        <div class="container consultation-layout">
+          <div>
+            <span class="eyebrow">ONLINE CONSULTATION</span>
+            <h2>Have a question before <span>you visit?</span></h2>
+            <p>
+              Send a non-urgent consultation enquiry. This demo records the
+              enquiry locally and does not connect you with a clinician.
+            </p>
+          </div>
+          <form id="consultationForm" class="consultation-form">
+            <div class="field">
+              <label for="consultName">Your name <span>*</span></label
+              ><input
+                id="consultName"
+                name="name"
+                required
+                minlength="2"
+                maxlength="80"
+                placeholder="Your name"
+              />
             </div>
-        </section>
+            <div class="field">
+              <label for="consultContact">Phone or email <span>*</span></label
+              ><input
+                id="consultContact"
+                name="contact"
+                required
+                maxlength="120"
+                placeholder="How can you be contacted?"
+              />
+            </div>
+            <div class="field full-field">
+              <label for="consultTopic"
+                >What is your enquiry about? <span>*</span></label
+              ><select id="consultTopic" name="topic" required>
+                <option value="">Choose a topic</option>
+                <option>Finding the right hospital</option>
+                <option>Appointment information</option>
+                <option>Online consultation information</option>
+                <option>General directory feedback</option>
+              </select>
+            </div>
+            <div class="field full-field">
+              <label for="consultMessageText">Message <span>*</span></label
+              ><textarea
+                id="consultMessageText"
+                name="message"
+                rows="3"
+                maxlength="600"
+                required
+                placeholder="Write a short, non-urgent enquiry. Do not include private medical records."
+              ></textarea>
+            </div>
+            <button class="btn btn-primary submit-btn" type="submit">
+              Save enquiry <span aria-hidden="true">→</span>
+            </button>
+            <p
+              class="form-message"
+              id="consultationMessage"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+      </section>
 
+      <section class="section about-section" id="about">
+        <div class="container about-grid">
+          <div class="about-mark">✚<span>SS</span></div>
+          <div>
+            <span class="eyebrow">ABOUT SEHAT SAATHI</span>
+            <h2>Healthcare information, <span>made easier.</span></h2>
+            <p>
+              Sehat Saathi is an independent student project designed to help
+              people explore hospital options in Karachi. It is not a hospital,
+              emergency service, medical provider, or official partner of the
+              hospitals listed.
+            </p>
+          </div>
+          <div class="about-badge">
+            <span>✦</span><strong>Built around clarity</strong
+            ><small>Simple information, helpful next steps.</small>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-    <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="container footer-inner">
-
-            <a
-                class="brand footer-brand"
-                href="#home"
-                aria-label="Sehat Saathi home"
-            >
-                <img
-                    src="images/logo.png"
-                    alt=""
-                    class="brand-logo"
-                    width="44"
-                    height="44"
-                >
-
-                <span>
-                    Sehat <span class="brand-accent">Saathi</span>
-                </span>
-            </a>
-
-            <p>Helping Karachi find hospital information.</p>
-
-            <a class="back-to-top" href="#home">
-                Back to top ↑
-            </a>
-
-        </div>
+      <div class="container footer-top">
+        <a class="brand footer-brand" href="#home"
+          ><span class="brand-mark">✚</span
+          ><span
+            ><strong>Sehat Saathi</strong><small>Care, made easier</small></span
+          ></a
+        >
+        <p>A student-built hospital directory for Karachi.</p>
+        <a class="back-top" href="#home">Back to top ↑</a>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="currentYear"></span> Sehat Saathi. Independent student
+          project.</span
+        ><span>For emergencies, seek immediate professional help.</span>
+      </div>
     </footer>
-
-</body>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
