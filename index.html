@@ -1,157 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sehat Saathi | Hospital Information in Karachi</title>
-  <meta name="description" content="Explore hospital information in Karachi and visit official websites to learn about available services.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header class="site-header" id="home">
-    <div class="container header-inner">
-      <a class="brand" href="#home">
-        <img src="images/logo.png" alt="Sehat Saathi logo" class="brand-logo">
-        <span class="brand-name">Sehat <span class="accent">Saathi</span></span>
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#hospitals">Hospitals</a>
-        <a href="#about">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="eyebrow">Your health, your guide</p>
-          <h1>Find the Right Hospital with <span class="accent">Sehat Saathi</span></h1>
-          <p class="lead">Explore hospital information in Karachi and visit official websites to learn about available services.</p>
-          <a href="#hospitals" class="btn btn-primary">Find a Hospital <span aria-hidden="true">&rarr;</span></a>
-        </div>
-        <div class="hero-media">
-          <!-- Replace with a Karachi hospital photo you have permission to use -->
-          <img src="images/hero.jpg" alt="Hospital building in Karachi" class="hero-img">
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#087f70" />
+    <meta name="description" content="Explore hospital information in Karachi with Sehat Saathi." />
+    <title>Sehat Saathi | Hospital Directory Karachi</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header" id="home">
+      <div class="container header-inner">
+        <a class="header-logo" href="#home" aria-label="Sehat Saathi home">
+          <img src="images/favicon.png" alt="Sehat Saathi logo" />
+        </a>
+        <a class="site-title" href="#home">Sehat <span>Saathi</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#hospitals">Hospitals</a>
+          <a href="#about">About</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- FEATURES -->
-    <section class="features">
-      <div class="container features-grid">
-        <div class="feature">
-          <div class="feature-icon" aria-hidden="true">&#128269;</div>
-          <h3>Find Hospitals</h3>
-          <p>Explore hospital websites and information.</p>
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Your health, your guide</p>
+            <h1>Find the Right Hospital with <span>Sehat Saathi</span></h1>
+            <p class="hero-text">
+              Explore hospital information in Karachi and visit official
+              websites to learn about available services.
+            </p>
+            <a class="btn btn-primary btn-block" href="#hospitals">
+              Find a Hospital <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+          <div class="hero-media">
+            <img class="hero-image" src="images/favicon.png" alt="Hospital building" />
+          </div>
         </div>
-        <div class="feature">
-          <div class="feature-icon" aria-hidden="true">&#10010;</div>
-          <h3>Explore Services</h3>
-          <p>Check details from official sources.</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon" aria-hidden="true">&#10003;</div>
-          <h3>Make Informed Choices</h3>
-          <p>Confirm details directly with each hospital.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- HOSPITALS -->
-    <section class="hospitals" id="hospitals">
-      <div class="container">
-        <p class="eyebrow">Explore your options</p>
-        <h2>Hospitals in Karachi</h2>
-        <p class="section-sub">Explore the hospitals below and visit their official websites for more information.</p>
-
-        <label class="search">
-          <span class="sr-only">Search hospitals</span>
-          <input type="search" id="search" placeholder="Search hospitals..." autocomplete="off">
-        </label>
-
-        <div class="card-grid" id="card-grid">
-
-          <article class="card">
-            <img src="images/aku.jpg" alt="Aga Khan University Hospital" loading="lazy">
-            <div class="card-body">
-              <p class="tag">Private Hospital</p>
-              <h3>Aga Khan University Hospital</h3>
-              <p class="card-text">Explore hospital information, medical services and patient resources through the official hospital website.</p>
-              <a class="btn btn-primary" href="https://hospitals.aku.edu" target="_blank" rel="noopener noreferrer">Visit Official Website <span aria-hidden="true">&#8599;</span></a>
+      <!-- FEATURES -->
+      <section class="features">
+        <div class="container features-grid">
+          <div class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                <circle cx="14" cy="10" r="6"></circle>
+                <line x1="9.5" y1="14.5" x2="4" y2="20"></line>
+              </svg>
             </div>
-          </article>
-
-          <article class="card">
-            <img src="images/indus.jpg" alt="Indus Hospital" loading="lazy">
-            <div class="card-body">
-              <p class="tag">Healthcare Services</p>
-              <h3>Indus Hospital</h3>
-              <p class="card-text">Learn about hospital facilities, healthcare services and other information through the official website.</p>
-              <a class="btn btn-primary" href="https://indushospital.org.pk" target="_blank" rel="noopener noreferrer">Visit Official Website <span aria-hidden="true">&#8599;</span></a>
+            <h3>Find Hospitals</h3>
+            <p>Explore hospital websites and information.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+              </svg>
             </div>
-          </article>
-
-          <article class="card">
-            <img src="images/jpmc.jpg" alt="Jinnah Postgraduate Medical Centre" loading="lazy">
-            <div class="card-body">
-              <p class="tag">Medical Centre</p>
-              <h3>Jinnah Postgraduate Medical Centre</h3>
-              <p class="card-text">Visit the medical centre's website to explore available hospital information and resources.</p>
-              <a class="btn btn-primary" href="https://jpmc.edu.pk" target="_blank" rel="noopener noreferrer">Visit Official Website <span aria-hidden="true">&#8599;</span></a>
+            <h3>Explore Services</h3>
+            <p>Check details from official sources.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4,13 10,19 20,6"></polyline>
+              </svg>
             </div>
-          </article>
-
+            <h3>Make Informed Choices</h3>
+            <p>Confirm details directly with each hospital.</p>
+          </div>
         </div>
+      </section>
 
-        <p class="no-results" id="no-results" hidden>No hospitals match your search.</p>
-        <p class="disclaimer">Please confirm current services and other details directly with each hospital.</p>
+      <!-- HOSPITALS -->
+      <section class="hospitals" id="hospitals">
+        <div class="container">
+          <p class="eyebrow">Explore your options</p>
+          <h2>Hospitals in Karachi</h2>
+          <p class="section-text">
+            Explore the hospitals below and visit their official websites for
+            more information.
+          </p>
+
+          <div class="card-grid">
+            <article class="card">
+              <img src="images/aga-khan.jpg" alt="Aga Khan University Hospital" loading="lazy" />
+              <div class="card-body">
+                <p class="tag">Private Hospital</p>
+                <h3>Aga Khan University Hospital</h3>
+                <p class="card-text">
+                  Explore hospital information, medical services and patient
+                  resources through the official hospital website.
+                </p>
+                <a class="btn btn-primary" href="https://hospitals.aku.edu/karachi/" target="_blank" rel="noopener noreferrer">
+                  Visit Official Website <span aria-hidden="true">&#8599;</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="images/indus-hospital.jpg" alt="Indus Hospital" loading="lazy" />
+              <div class="card-body">
+                <p class="tag">Healthcare Services</p>
+                <h3>Indus Hospital</h3>
+                <p class="card-text">
+                  Learn about hospital facilities, healthcare services and
+                  other information through the official website.
+                </p>
+                <a class="btn btn-primary" href="https://indushospital.org.pk/" target="_blank" rel="noopener noreferrer">
+                  Visit Official Website <span aria-hidden="true">&#8599;</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="images/jpmc.jpg" alt="Jinnah Postgraduate Medical Centre" loading="lazy" />
+              <div class="card-body">
+                <p class="tag">Medical Centre</p>
+                <h3>Jinnah Postgraduate Medical Centre</h3>
+                <p class="card-text">
+                  Visit the medical centre's website to explore available
+                  hospital information and resources.
+                </p>
+                <a class="btn btn-primary" href="https://jpmc.edu.pk/" target="_blank" rel="noopener noreferrer">
+                  Visit Official Website <span aria-hidden="true">&#8599;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <p class="disclaimer">
+            Please confirm current services and other details directly with
+            each hospital.
+          </p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about-badge" aria-hidden="true">+</div>
+          <p class="eyebrow">About Sehat Saathi</p>
+          <h2>Health information, made easier to explore.</h2>
+          <p class="about-text">
+            Sehat Saathi is an independent student project designed to help
+            people explore hospital information through official online
+            sources. It is not an emergency service or a medical advice
+            platform.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="#home">
+          <img src="images/logo.png" alt="Sehat Saathi logo" />
+          <span>Sehat <strong>Saathi</strong></span>
+        </a>
+        <p class="footer-tagline">Helping Karachi find hospital information.</p>
+        <a class="back-top" href="#home">Back to top &uarr;</a>
       </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <div class="container about-inner">
-        <div class="about-badge" aria-hidden="true">+</div>
-        <p class="eyebrow">About Sehat Saathi</p>
-        <h2>Health information, made easier to explore.</h2>
-        <p class="lead">Sehat Saathi is an independent student project designed to help people explore hospital information through official online sources. It is not an emergency service or a medical advice platform.</p>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <a class="brand" href="#home">
-        <img src="images/logo.png" alt="Sehat Saathi logo" class="footer-logo">
-        <span class="brand-name">Sehat <span class="accent">Saathi</span></span>
-      </a>
-      <p class="footer-text">Helping Karachi find hospital information.</p>
-      <a href="#home" class="back-top">Back to top &uarr;</a>
-    </div>
-  </footer>
-
-  <script>
-    // Simple hospital search filter
-    const search = document.getElementById('search');
-    const cards = document.querySelectorAll('#card-grid .card');
-    const noResults = document.getElementById('no-results');
-
-    search.addEventListener('input', () => {
-      const q = search.value.trim().toLowerCase();
-      let visible = 0;
-      cards.forEach(card => {
-        const match = card.textContent.toLowerCase().includes(q);
-        card.hidden = !match;
-        if (match) visible++;
-      });
-      noResults.hidden = visible !== 0;
-    });
-  </script>
-</body>
+    </footer>
+  </body>
 </html>
